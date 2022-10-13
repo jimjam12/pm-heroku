@@ -84,14 +84,13 @@ class RegisterForm(forms.ModelForm):
     address = forms.CharField(label='Address', widget=forms.TextInput(attrs={
         "class": "form-control",
         "placeholder": "Address"
-    }))
 
-    employee = forms.BooleanField(label='Employee')
-    employer = forms.BooleanField(label='Employer')
+
+    }))
 
     class Meta:
         model = User
-        fields = ('email', 'first_name', 'middle_name', 'last_name', 'gender', 'nationality', 'birth_date', 'address')
+        fields = ('email', 'first_name', 'middle_name', 'last_name', 'gender', 'nationality', 'birth_date', 'address', 'hr', 'accounting', 'employee', 'admin' )
 
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')

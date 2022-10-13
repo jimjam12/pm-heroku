@@ -66,6 +66,31 @@ color:#FFFFFF;
 	transition: all 0.3s linear;
 }
 
+.container_dview{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: 500px;
+    width: 800px;
+    border: solid rgb(99, 63, 17);
+    border-radius: 5%;
+    background-color: rgb(236, 207, 172);
+}
+.header_dview{
+    background-color: antiquewhite;
+
+}
+.h1_dview{
+    font-size: 25px;
+    text-align: center;
+}
+
+.text_dview{
+    font-size: 20px;
+    margin-left: 30px;
+}
 
 /* Small Desktops */
 @media (min-width: 768px) and (max-width: 1096px) {
@@ -177,3 +202,4 @@ color:#FFFFFF;
   background-color: ##B660CD;
   color: white;
 }
+

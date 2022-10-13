@@ -10,18 +10,24 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-  </head>
+      <title>Contact</title>
+      </head>
 
   <body>
     {% include 'navbar.html' %}
 
+    <div class="contacthead">
+        Contact Us
+    </div>
+
             <div style="text-align: center; vertical-align: middle">
                 <form method="post" id='form1'>
                     {%  csrf_token %}
-                    {%  for foo in form %}
-                        {{ foo.errors }}
-                        {{ foo }}
-                    {%  endfor %}
+                    <p>Email:</p>{{ form.email }}
+                    <p>Fullname:</p>{{ form.fullname }}
+                    <p>Content:</p>{{ form.content }}
+                    <br><br>
+
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

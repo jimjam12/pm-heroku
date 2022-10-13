@@ -9,6 +9,10 @@
   overflow: auto;
 }
 
+.contacthead {
+  margin-left: 600px;
+  font-size: 64px;
+}
 /* Sidebar links */
 .sidebar a {
   display: block;

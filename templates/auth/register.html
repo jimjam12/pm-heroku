@@ -18,7 +18,18 @@ h2{
 </button>
 <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
+    <p>Email: {{ form.email }}</p>
+    <p>First Name: {{ form.first_name }}</p>
+    <p>Middle Name: {{ form.middle_name }}</p>
+    <p>Last Name: {{ form.last_name }}</p>
+    <p>Gender: {{ form.gender }}</p>
+    <p>Nationality: {{ form.nationality }}</p>
+    <p>Birth Date: {{ form.birth_date }}</p>
+    <p>Address: {{ form.address }}</p>
+    <p>HR: {{ form.hr }}</p>
+    <p>Accounting: {{ form.accounting }}</p>
+    <p>Employee: {{ form.employee }}</p>
+    <p>Admin: {{ form.admin }}</p>
     <input type="submit" value="Submit">
 </form>
 </body>

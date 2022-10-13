@@ -4,17 +4,77 @@
 <body style="background-color:antiquewhite;">
 <head>
     <title>User List</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
+
+        body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #000000;
+  color: white;
+  font-size: 19.7px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #000000;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
         table, th, td {
   border:1px solid black;
 }
+          h2 {
+  text-align: center;
+
+}
 </style>
 </head>
+
+
+
 <body>
+
 {% include 'navbar.html' %}
 <h2 class="title">User List</h2>
 <div class="table1">
-<table align="center" class="userlist">
+
+     <form class="example" style="margin:auto;max-width:300px">
+         <input name="q" type="text" value="{{q}}" placeholder="Search..."/>
+         <button type="submit"><i class="fa fa-search"></i></button>
+     </form>
+
+&nbsp
+
+    <table align="center" class="userlist">
     <thead>
     <tr>
         <th>ID</th>
@@ -46,4 +106,3 @@
 </div>
 </body>
 </html>
-

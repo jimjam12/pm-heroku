@@ -2,7 +2,7 @@ from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.db import models
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, password=None, is_active=True, is_staff=False, is_admin=False, is_employee=True):
+    def create_user(self, email, password=None, is_active=True, is_staff=False, is_admin=False, is_employee=False, is_hr=False, is_accounting=False):
         if not email:
             raise ValueError("Must have Email")
         if not password:
@@ -16,6 +16,8 @@ class UserManager(BaseUserManager):
         user_obj.admin = is_admin
         user_obj.active = is_active
         user_obj.employee = is_employee
+        user.obj.accounting = is_accounting
+        user_obj.hr = is_hr
         user_obj.save(using=self._db)
 
         return user_obj
@@ -46,10 +48,10 @@ class UserManager(BaseUserManager):
             email,
             password=password,
             is_staff=True,
+
             is_active=True,
         )
         return user
-
 
 class User(AbstractBaseUser):
     email = models.EmailField(max_length=255, unique=True)
@@ -63,6 +65,8 @@ class User(AbstractBaseUser):
     address = models.CharField(default="", max_length=100)
     activate = models.BooleanField(default=True)
     staff = models.BooleanField(default=False)
+    hr = models.BooleanField(default=False)
+    accounting = models.BooleanField(default=False)
     employee = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)

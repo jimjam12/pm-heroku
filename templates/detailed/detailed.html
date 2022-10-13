@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <Title></Title>
+    <link rel="stylesheet" href="main.css">
+    <body style="background-color: antiquewhite">
+    {% include 'navbar.html' %}
+</head>
+<body>
+{% include 'navbar.html' %}
+
+<div class="container_dview">
+            <div class="header_dview">
+                <h1 class = "h1_dview"> U S E R &nbsp&nbsp&nbsp P R O F I L E</h1>
+            </div>
+            <br><br>
+
+            <div>
+                <h1 class = "text_dview">Email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{foo.email}}</h1>
+                <h1 class = "text_dview">First Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{.first_name}}</h1>
+                <h1 class = "text_dview">Middle Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{.middle_name}}</h1>
+                <h1 class = "text_dview">Last Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{.last_name}}</h1>
+                <h1 class = "text_dview">Gender&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{.gender}}</h1>
+                <h1 class = "text_dview">Nationality&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{.nationality}}</h1>
+                <h1 class = "text_dview">Date of Birth&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{.birth_date}}</h1>
+                <h1 class = "text_dview">Address&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: &nbsp{{.address}} </h1>
+                <h1 class = "text_dview">Mobile Number&nbsp&nbsp&nbsp: &nbsp{{.mobile_number}}</h1>
+
+            </div>
+
+         </div>
+
+</body>
+</html>
