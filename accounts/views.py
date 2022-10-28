@@ -23,4 +23,4 @@ def login_page(request):
 class RegisterView(CreateView):
     form_class = RegisterForm
     template_name = 'auth/register.html'
-    success_url = '/'
+    success_url = '../home'

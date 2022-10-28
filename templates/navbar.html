@@ -9,6 +9,7 @@
 <body>
 <div class="sidebar">
     <a href="{% url 'home_page' %}">Home</a>
+    <a href="{% url 'my_info' %}">My Information</a>
     <div class="topnav-right">
     {% if not request.user.is_authenticated %}
     <a href="{% url 'login' %}">Login</a>

@@ -1,0 +1,42 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <title>User Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <body style="background-color:antiquewhite;">
+    <style>
+        .currentuser{
+            margin-left: 220px;
+            font-size: 20px;
+        }
+
+        .head-title{
+            margin-left: 220px;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+{% include 'navbar.html' %}
+<h2 class="title">
+    {{ course.ctitle }}
+</h2>
+
+
+<p class="head-title">USER INFORMATION</p>
+<p class="currentuser">Full name: {{ user.first_name }} {{ user.middle_name }} {{ user.last_name }}</p>
+<p class="currentuser">Email: {{ user.email }}</p>
+<p class="currentuser">Nationality: {{ user.nationality }}</p>
+<p class="currentuser">Birthdate: {{ user.birth_date }}</p>
+<p class="currentuser">Address: {{ user.address }}</p>
+<p class="currentuser">Gender: {{ user.gender }}</p>
+<p class="currentuser">Pay Per Day: {{ user.pay_per_day1 }}</p>
+<p class="currentuser">Number of total attendance *insert attendance shit here* </p>
+<p class="currentuser">Number of Sick Leave: {{ user.sick_leave }}</p>
+<p class="currentuser">Number of Vacation Leave: {{ user.vacation_leave }}</p>
+<p class="currentuser">Tax rate Deductions: {{ user.tax_rate }}</p>
+<p class="currentuser">Total Pay: *insert (Pay per day* total attendance)-( 1- tax rate deduction)*</p>
+</body>
+</html>

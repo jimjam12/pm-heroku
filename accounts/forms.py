@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth import get_user_model, authenticate
 
+import calculation
+
 User = get_user_model()
 
 class LoginForm(forms.Form):
@@ -46,11 +48,6 @@ class RegisterForm(forms.ModelForm):
         "placeholder": "Confirm Password"
     }))
 
-    mobile_number = forms.CharField(label='Mobile Number', widget=forms.NumberInput(attrs={
-        "class": "form-control",
-        "placeholder": "Mobile Number"
-    }))
-
     first_name = forms.CharField(label='First Name', widget=forms.TextInput(attrs={
         "class": "form-control",
         "placeholder": "First Name"
@@ -84,13 +81,39 @@ class RegisterForm(forms.ModelForm):
     address = forms.CharField(label='Address', widget=forms.TextInput(attrs={
         "class": "form-control",
         "placeholder": "Address"
-
-
     }))
+
+    pay_per_day1 = forms.DecimalField(label='Pay per Day', widget=forms.NumberInput(attrs={
+        "class": "form-control",
+        "placeholder": "Pay per Day"
+    }))
+
+    sick_leave = forms.IntegerField(label='Sick Leave', widget=forms.NumberInput(attrs={
+        "class": "form-control",
+        "placeholder": "No. of Sick Leave"
+    }))
+
+    vacation_leave = forms.IntegerField(label='Vacation Leave', widget=forms.NumberInput(attrs={
+        "class": "form-control",
+        "placeholder": "No. of Vacation Leave"
+    }))
+
+    tax_rate = forms.DecimalField(label='Tax Rate', widget=forms.NumberInput(attrs={
+        "class": "form-control",
+        "placeholder": "in decimal form"
+    }))
+
+    # tax_pay = forms.DecimalField(
+    #     widget=calculation.FormulaInput(1 - tax_rate)
+    # )
+
+    # total_pay = forms.DecimalField(
+    #     widget=calculation.FormulaInput('(payperday1 * total_attendance) - tax_pay')
+    # )
 
     class Meta:
         model = User
-        fields = ('email', 'first_name', 'middle_name', 'last_name', 'gender', 'nationality', 'birth_date', 'address', 'hr', 'accounting', 'employee', 'admin' )
+        fields = ('email', 'first_name', 'middle_name', 'last_name', 'gender', 'nationality', 'birth_date', 'address', 'hr', 'admin', 'accounting', 'employee', 'pay_per_day1', 'sick_leave', 'vacation_leave', 'tax_rate')
 
     def clean_password2(self):
         password1 = self.cleaned_data.get('password1')

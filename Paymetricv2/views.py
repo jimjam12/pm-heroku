@@ -14,6 +14,7 @@ def startup(request):
 
 def home_page(request):
     if request.user.is_authenticated:
+        print(request.session.get('first_name'))
         return render(request, "home/home_page.html")
     else:
         return redirect('login')
@@ -63,18 +64,46 @@ def delete(request, id):
     user.delete()
     return redirect('list_user')
 
+def profile(request):
+
+    employee = User.objects.filter(id=id)
 
 def updaterecord(request, id):
     newEmail = request.POST['email']
     newFirstName = request.POST['first_name']
+    newMiddleName = request.POST['middle_name']
+    newLastName = request.POST['last_name']
+    newGender = request.POST['gender']
+    newNationality = request.POST['nationality']
+    newBirthDate = request.POST['birth_date']
+    newAddress = request.POST['address']
+    newPayPerDay1 = request.POST['pay_per_day1']
+    newSickLeave = request.POST['sick_leave']
+    newVacationLeave = request.POST['vacation_leave']
+    newTaxRate = request.POST['tax_rate']
+
     user = User.objects.get(id=id)
     user.email = newEmail
     user.first_name = newFirstName
+    user.middle_name = newMiddleName
+    user.last_name = newLastName
+    user.gender = newGender
+    user.nationality = newNationality
+    user.birth_date = newBirthDate
+    user.address = newAddress
+    user.pay_per_day1 = newPayPerDay1
+    user.sick_leave = newSickLeave
+    user.vacation_leave = newVacationLeave
+    user.tax_rate = newTaxRate
     user.save()
+
     return redirect('list_user')
 
 def attendance(request):
     return render(request, "attendance/attendance.html")
 
 def detailed(request):
-    return render(request, "detailed/detailed.html")
+    return render(request, "my_info/my_info.html")
+
+def userinformation(request):
+    return render(request, "details/detailed_view.html")

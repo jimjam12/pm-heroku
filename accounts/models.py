@@ -16,7 +16,7 @@ class UserManager(BaseUserManager):
         user_obj.admin = is_admin
         user_obj.active = is_active
         user_obj.employee = is_employee
-        user.obj.accounting = is_accounting
+        user_obj.accounting = is_accounting
         user_obj.hr = is_hr
         user_obj.save(using=self._db)
 
@@ -48,14 +48,12 @@ class UserManager(BaseUserManager):
             email,
             password=password,
             is_staff=True,
-
             is_active=True,
         )
         return user
 
 class User(AbstractBaseUser):
     email = models.EmailField(max_length=255, unique=True)
-    mobile_number = models.IntegerField
     first_name = models.CharField(max_length=100)
     middle_name = models.CharField(default="", max_length=100)
     last_name = models.CharField(max_length=100)
@@ -70,6 +68,11 @@ class User(AbstractBaseUser):
     employee = models.BooleanField(default=False)
     admin = models.BooleanField(default=False)
     timestamp = models.DateTimeField(auto_now_add=True)
+    pay_per_day1 = models.DecimalField(null=True, max_digits=5, decimal_places=2)
+    sick_leave = models.IntegerField(null=True)
+    vacation_leave = models.IntegerField(null=True)
+    tax_rate = models.DecimalField(null=True , max_digits=5, decimal_places=2)
+
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []

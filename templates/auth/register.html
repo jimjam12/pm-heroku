@@ -16,9 +16,13 @@ h2{
 <button class="button1">
     <a href="../home">Return to home</a>
 </button>
-<form method="post">
+<form>
+<br method="post">
     {% csrf_token %}
+    {{ form.errors }}
     <p>Email: {{ form.email }}</p>
+    <p>Password: {{ form.password1 }}</p>
+    <p>Confirm Password: {{ form.password2 }}</p>
     <p>First Name: {{ form.first_name }}</p>
     <p>Middle Name: {{ form.middle_name }}</p>
     <p>Last Name: {{ form.last_name }}</p>
@@ -30,7 +34,11 @@ h2{
     <p>Accounting: {{ form.accounting }}</p>
     <p>Employee: {{ form.employee }}</p>
     <p>Admin: {{ form.admin }}</p>
-    <input type="submit" value="Submit">
+    <p>Pay Per Day: {{ form.pay_per_day1 }}</p>
+    <p>Number of Sick Leave: {{ form.sick_leave }}</p>
+    <p>Number of Vacation Leave: {{ form.vacation_leave }}</p>
+    <p>Tax rate Deductions: {{ form.tax_rate }}</p>
+    <input type="submit" formmethod="post" value="Submit">
 </form>
 </body>
 

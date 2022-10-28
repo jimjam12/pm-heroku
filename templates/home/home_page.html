@@ -42,7 +42,7 @@
   <body>
     {% include 'navbar.html' %}
 
-    {% if request.user.is_staff %}
+    {% if request.user.is_admin %}
         <div class="text-center">
             <h1>Welcome to Dashboard, {{ request.user }}</h1>
 
