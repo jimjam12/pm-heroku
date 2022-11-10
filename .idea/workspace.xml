@@ -3,11 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="df49da14-27aa-440e-9138-7dc89497eb90" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Paymetricv2/settings/__init__.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/Paymetric-1018.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Paymetric-1018.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Paymetricv2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Paymetricv2/settings/base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Paymetricv2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Paymetricv2/settings/base.py" afterDir="false" />
+>>>>>>> 4611e9d20272bc8f68355cb8af2bebb647dd4a97
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +45,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Paymetric-1025" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Jaz\Desktop\Paymetric-1025 recent\Paymetricv2\settings" />
+    </key>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -104,7 +114,10 @@
       <workItem from="1668044941654" duration="15000" />
       <workItem from="1668044988419" duration="1416000" />
       <workItem from="1668046428578" duration="10844000" />
+<<<<<<< HEAD
       <workItem from="1668115503292" duration="80000" />
+=======
+>>>>>>> 4611e9d20272bc8f68355cb8af2bebb647dd4a97
     </task>
     <task id="LOCAL-00001" summary="`changes 1025`">
       <created>1666956660870</created>
@@ -137,8 +150,13 @@
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1668051797754" />
     <state x="686" y="214" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1666627160433" />
+<<<<<<< HEAD
     <state x="464" y="247" key="FileChooserDialogImpl/1920.0.1366.730/0.0.1536.834@0.0.1536.834" timestamp="1668115581594" />
     <state x="277" y="59" key="SettingsEditor" timestamp="1668115583461">
+=======
+    <state x="549" y="172" key="FileChooserDialogImpl/1920.0.1366.730/0.0.1536.834@0.0.1536.834" timestamp="1668012922525" />
+    <state x="277" y="59" key="SettingsEditor" timestamp="1668058468531">
+>>>>>>> 4611e9d20272bc8f68355cb8af2bebb647dd4a97
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="277" y="59" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1668058468531" />
