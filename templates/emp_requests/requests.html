@@ -1,0 +1,59 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en" >
+<body style="background-color:antiquewhite;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/nav.css">
+      <title>Requests</title>
+      </head>
+
+  <body> 
+    {% include 'navbar.html' %}
+
+    <div class="contacthead">
+        Requests
+    </div>
+
+
+        <table align="center" class="userlist">
+    <thead>
+    <tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Type</th>
+        <th>Reason</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+
+        {% for foo in qs %}
+        <tr>
+{#            <td data-label="ID"><{{ foo.id }}/td>#}
+            <td data-label="Email">{{ foo.emp_email }}</td>
+            <td data-label="Name">{{ foo.emp_name }}</td>
+            <td data-label="Start of Leave">{{ foo.emp_leaveDateStart }}</td>
+            <td data-label="End of Leave">{{ foo.emp_leaveDateEnd }}</td>
+            <td data-label="Type of Leave">{{ foo.typeOf_leave }}</td>
+            <td data-label="Reason">{{ foo.reasonFor_leave }}</td>
+            <td>
+                    <button onclick="location.href='{% url 'leaveApprove' foo.id %}'">Approve</button>
+            </td>
+            <td>
+                <button onclick="location.href='{% url 'leaveDecline' foo.id %}'">Reject</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+            </div> 

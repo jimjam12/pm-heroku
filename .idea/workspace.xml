@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df49da14-27aa-440e-9138-7dc89497eb90" name="Default Changelist" comment="``">
-      <change afterPath="$PROJECT_DIR$/.idea/Paymetric-1018.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/details/detailed_view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/employee/employee_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/my_info/my_info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PAYMETRIC-main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="df49da14-27aa-440e-9138-7dc89497eb90" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/venv/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Paymetricv2/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Paymetricv2/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Paymetricv2/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Paymetricv2/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Paymetricv2/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Paymetricv2/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Paymetricv2/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Paymetricv2/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static_my_project/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static_my_project/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/list_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/list_user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/attendance/attendance.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/attendance/attendance.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auth/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/auth/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/auth/update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/detailed/detailed.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home/home_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/my_info/my_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/my_info/my_info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -58,7 +46,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Paymetric-1025" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -107,27 +95,50 @@
       <workItem from="1666633974627" duration="880000" />
       <workItem from="1666706825678" duration="1950000" />
       <workItem from="1666709603433" duration="1235000" />
-      <workItem from="1666956367223" duration="276000" />
+      <workItem from="1666956367223" duration="349000" />
+      <workItem from="1666956756032" duration="224000" />
+      <workItem from="1667139387965" duration="1215000" />
+      <workItem from="1667152518730" duration="628000" />
+      <workItem from="1667885070385" duration="4730000" />
+      <workItem from="1668009298073" duration="2539000" />
+      <workItem from="1668011879033" duration="895000" />
+      <workItem from="1668012803340" duration="4464000" />
+      <workItem from="1668044941654" duration="15000" />
+      <workItem from="1668044988419" duration="1416000" />
+      <workItem from="1668046428578" duration="9585000" />
     </task>
+    <task id="LOCAL-00001" summary="`changes 1025`">
+      <created>1666956660870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666956660870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="`changes 1025`" />
+    <option name="LAST_COMMIT_MESSAGE" value="`changes 1025`" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="75" key="#Inspections" timestamp="1666540077009">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="75" key="#Inspections/1920.0.1366.730/0.0.1536.834@0.0.1536.834" timestamp="1666540077009" />
-    <state x="393" y="11" key="CommitChangelistDialog2" timestamp="1666539148613">
+    <state x="393" y="11" key="CommitChangelistDialog2" timestamp="1666956659924">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="393" y="11" key="CommitChangelistDialog2/1920.0.1366.730/0.0.1536.834@0.0.1536.834" timestamp="1666539148613" />
-    <state x="686" y="214" key="FileChooserDialogImpl" timestamp="1666627160433">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="11" key="CommitChangelistDialog2/1920.0.1366.730/0.0.1536.834@0.0.1536.834" timestamp="1666956659924" />
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1668051797754">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1668051797754" />
     <state x="686" y="214" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1536.824@0.0.1920.1040" timestamp="1666627160433" />
-    <state x="549" y="172" key="FileChooserDialogImpl/1920.0.1366.730/0.0.1536.834@0.0.1536.834" timestamp="1666544400539" />
+    <state x="549" y="172" key="FileChooserDialogImpl/1920.0.1366.730/0.0.1536.834@0.0.1536.834" timestamp="1668012922525" />
     <state x="346" y="74" key="SettingsEditor" timestamp="1666627535966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

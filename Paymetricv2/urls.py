@@ -1,12 +1,13 @@
 from django.contrib import admin
 from django.urls import path
 
-from .views import home_page, contact, startup, list_user, update, delete, updaterecord, attendance, detailed, userinformation
-from accounts.views import RegisterView, login_page
+from .views import home_page, contact, startup, list_user, update, delete, updaterecord, detailed, userinformation, requests, leaveApprove, leaveDecline, AdminleaveApprove, AdminleaveDecline
+from accounts.views import RegisterView, login_page, attendance, clockIn, clockOut
 from django.contrib.auth import views as auth_views
 
 from django.conf import settings
 from django.conf.urls.static import static
+from . import views
 
 urlpatterns = [
     path('', startup),
@@ -24,7 +25,20 @@ urlpatterns = [
     path('update/<int:id>', update, name='update'),
     path('delete/<int:id>', delete, name='delete'),
 
+    path('leave-approve/<int:id>', leaveApprove, name='leaveApprove'),
+    path('leave-decline/<int:id>', leaveDecline, name='leaveDecline'),
+    path('admin-leave-approve/<int:id>', AdminleaveApprove, name='AdminleaveApprove'),
+    path('admin-leave-decline/<int:id>', AdminleaveDecline, name='AdminleaveDecline'),
+
+    path('emp_requests/', views.request_leave, name='request_leave'),
+    # path('emp_requests/requests', views.requests, name='requests'),
+
+    path('requests/', requests, name='requests'),
+    # path('requests/request_leave', request_leave, name='request_leave'),
+
     path('attendance/', attendance, name='attendance'),
+    path('clock-in/', clockIn, name='clock-in'),
+    path('clock-out/', clockOut, name='clock-out'),
 
 ]
 

@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth import get_user_model, authenticate
 
+from django.forms import ModelForm
+from .models import RequestLeave
 import calculation
 
 User = get_user_model()
@@ -103,14 +105,6 @@ class RegisterForm(forms.ModelForm):
         "placeholder": "in decimal form"
     }))
 
-    # tax_pay = forms.DecimalField(
-    #     widget=calculation.FormulaInput(1 - tax_rate)
-    # )
-
-    # total_pay = forms.DecimalField(
-    #     widget=calculation.FormulaInput('(payperday1 * total_attendance) - tax_pay')
-    # )
-
     class Meta:
         model = User
         fields = ('email', 'first_name', 'middle_name', 'last_name', 'gender', 'nationality', 'birth_date', 'address', 'hr', 'admin', 'accounting', 'employee', 'pay_per_day1', 'sick_leave', 'vacation_leave', 'tax_rate')
@@ -130,3 +124,10 @@ class RegisterForm(forms.ModelForm):
         if commit:
             user.save()
         return user
+
+class RequestForm(ModelForm):
+    class Meta:
+        model = RequestLeave
+        fields = '__all__'
+
+

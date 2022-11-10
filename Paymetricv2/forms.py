@@ -31,3 +31,11 @@ class ContactForm(forms.Form):
         if not "gmail.com" in email:
             raise forms.ValidationError("Email has to be gmail.com")
         return email
+
+class RequestForm(forms.Form):
+    emp_email = forms.EmailField()
+    emp_name = forms.CharField(max_length=100)
+    emp_leaveDateStart = forms.DateField()
+    emp_leaveDateEnd = forms.DateField()
+    typeOf_leave = forms.Select()
+    reasonFor_leave = forms.CharField(max_length=100)

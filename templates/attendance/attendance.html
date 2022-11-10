@@ -7,6 +7,34 @@
 </head>
 <body>
 
+    <table align="center" class="userlist">
+    <thead>
+    <tr>
+        <th>Attendance Date</th>
+        <th>Time-In</th>
+        <th>Time-Out</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for foo in qs %}
+        <tr>
+            <td data-label="ID">{{ foo.currentDate }}</td>
+            <td data-label="Email">{{ foo.timeIn }}</td>
+            <td data-label="First-Name">{{ foo.timeOut }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if query.timeIn and query.timeOut %}
+    Nag Attendance kana
+
+{% elif query.timeIn %}
+    <a href="{% url 'clock-out' %}">Time Out</a>
+
+{% elif not query.timeIn and not query.timeOut %}
+    <a href="{% url 'clock-in' %}">Time In</a>
+{% endif %}
 
 {#{% include 'navbar.html' %}#}
 

@@ -1,0 +1,55 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en" >
+<body style="background-color:antiquewhite;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+      <title>Request Leave</title>
+      </head>
+
+  <body>
+    {% include 'navbar.html' %}
+
+    <div class="contacthead">
+        Request Leave
+        {{request.user}}
+    </div>
+
+            <div style="text-align: center; vertical-align: middle">
+              
+
+                <form method = "POST" id='form1'>
+                  {% csrf_token %}
+                  
+                    <p>Email:</p>
+                    <input type = "email" name = "emp_email" value = "{{user.email}}" readonly>
+                    
+                    <p>Fullname:</p>
+                    <input type = "text" name = "emp_name" value = "{{user.first_name}} {{user.middle_name}} {{user.last_name}}" readonly>
+
+                    <p>Leave Date:</p>
+                    <p>Start: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  End:   </p>
+                    <input type = "date" name = "emp_leaveDateStart">
+                    <input type = "date" name = "emp_leaveDateEnd">
+                    <br><br>
+                    {{d1.day}}
+                    
+                    <p>Type Of Leave:</p>
+                    <select name = "typeOf_leave">
+                      <option value="Sick Leave">Sick Leave</option>
+                      <option value="Vacation Leave">Vacation Leave</option>
+                    </select>
+
+                    <p>Reason for leave:</p>
+                    <input type = "text" name = "reasonFor_leave">
+                    <br><br>
+                              
+                    <input type="submit" class="btn btn-primary" name = "req_submit">
+                </form>
+            </div>

@@ -49,6 +49,7 @@ class UserManager(BaseUserManager):
             password=password,
             is_staff=True,
             is_active=True,
+            is_admin=True
         )
         return user
 
@@ -103,4 +104,34 @@ class User(AbstractBaseUser):
     @property
     def is_active(self):
         return True
+
+
+TYPE_OF_LEAVE = (
+    ('Vacation Leave', 'Vacation Leave'),
+    ('Sick Leave', 'Sick Leave')
+)
+
+class RequestLeave(models.Model):
+    emp_email = models.EmailField()
+    emp_name = models.CharField(max_length=100)
+    emp_leaveDateStart = models.DateField()
+    emp_leaveDateEnd = models.DateField()
+    typeOf_leave = models.CharField(max_length=50, choices=TYPE_OF_LEAVE)
+    reasonFor_leave = models.CharField(max_length=100)
+    IsApproved = models.BooleanField(default=False)
+    IsDeclined = models.BooleanField(default=False)
+    AdminApproved = models.BooleanField(default=False)
+    AdminDeclined = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.emp_email
+
+class Attendance(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    currentDate = models.DateField(auto_now_add=True)
+    timeIn = models.TimeField(blank=True, null=True)
+    timeOut = models.TimeField(blank=True, null=True)
+
+    def __str__(self):
+        return self.user.email
 
